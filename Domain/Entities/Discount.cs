@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public partial class Discount
+public partial class Discount : BaseEntity
 {
-    public int Id { get; set; }
-
     public string Discount1 { get; set; }
 
     public string Description { get; set; }

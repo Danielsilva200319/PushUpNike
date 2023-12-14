@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public partial class Phone
+public partial class Phone : BaseEntity
 {
-    public int Id { get; set; }
-
     public string Phone1 { get; set; }
 
     public string TypePhone { get; set; }

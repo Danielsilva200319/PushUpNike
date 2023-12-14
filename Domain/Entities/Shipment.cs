@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public partial class Shipment
+public partial class Shipment : BaseEntity
 {
-    public int Id { get; set; }
-
     public DateOnly? ShipmentDate { get; set; }
 
     public DateOnly? EstimatedArrival { get; set; }

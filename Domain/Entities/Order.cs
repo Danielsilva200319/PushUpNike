@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public partial class Order
+public partial class Order : BaseEntity
 {
-    public int Id { get; set; }
-
     public DateOnly? OrderDate { get; set; }
 
     public int? TotalAmount { get; set; }
