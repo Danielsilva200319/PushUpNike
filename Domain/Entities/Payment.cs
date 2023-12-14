@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Persistence.Entities;
+namespace Domain.Entities;
 
 public partial class Payment
 {
@@ -17,11 +17,11 @@ public partial class Payment
 
     public int? IdStatus { get; set; }
 
-    public virtual Client? IdClientNavigation { get; set; }
+    public virtual Client IdClientNavigation { get; set; }
 
-    public virtual Status? IdStatusNavigation { get; set; }
+    public virtual Status IdStatusNavigation { get; set; }
 
-    public virtual Typepayment? IdTypePaymentNavigation { get; set; }
+    public virtual Typepayment IdTypePaymentNavigation { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Persistence.Entities;
+namespace Domain.Entities;
 
 public partial class Order
 {
@@ -23,15 +23,15 @@ public partial class Order
 
     public int? IdProduct { get; set; }
 
-    public virtual Client? IdClientNavigation { get; set; }
+    public virtual Client IdClientNavigation { get; set; }
 
-    public virtual Payment? IdPaymentNavigation { get; set; }
+    public virtual Payment IdPaymentNavigation { get; set; }
 
-    public virtual Product? IdProductNavigation { get; set; }
+    public virtual Product IdProductNavigation { get; set; }
 
-    public virtual Shipment? IdShipmentNavigation { get; set; }
+    public virtual Shipment IdShipmentNavigation { get; set; }
 
-    public virtual Status? IdStatusNavigation { get; set; }
+    public virtual Status IdStatusNavigation { get; set; }
 
-    public virtual Typeorder? IdTypeOrderNavigation { get; set; }
+    public virtual Typeorder IdTypeOrderNavigation { get; set; }
 }

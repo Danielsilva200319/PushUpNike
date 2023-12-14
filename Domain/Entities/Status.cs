@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Persistence.Entities;
+namespace Domain.Entities;
 
 public partial class Status
 {
     public int Id { get; set; }
 
-    public string? EntityName { get; set; }
+    public string EntityName { get; set; }
 
-    public string? Status1 { get; set; }
+    public string Status1 { get; set; }
 
-    public string? Description { get; set; }
+    public string Description { get; set; }
 
     public virtual ICollection<Discount> Discounts { get; set; } = new List<Discount>();
 

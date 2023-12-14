@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Persistence.Entities;
+namespace Domain.Entities;
 
 public partial class Shipment
 {
@@ -19,11 +19,11 @@ public partial class Shipment
 
     public int? IdTypeShipment { get; set; }
 
-    public virtual Address? IdAddressNavigation { get; set; }
+    public virtual Address IdAddressNavigation { get; set; }
 
-    public virtual Status? IdStatusNavigation { get; set; }
+    public virtual Status IdStatusNavigation { get; set; }
 
-    public virtual Typeshipment? IdTypeShipmentNavigation { get; set; }
+    public virtual Typeshipment IdTypeShipmentNavigation { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

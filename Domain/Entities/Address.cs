@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Persistence.Entities;
+namespace Domain.Entities;
 
 public partial class Address
 {
     public int Id { get; set; }
 
-    public string? Address1 { get; set; }
+    public string Address1 { get; set; }
 
     public int? IdPostalCode { get; set; }
 
@@ -17,9 +17,9 @@ public partial class Address
 
     public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
 
-    public virtual City? IdCityNavigation { get; set; }
+    public virtual City IdCityNavigation { get; set; }
 
-    public virtual Postalcode? IdPostalCodeNavigation { get; set; }
+    public virtual Postalcode IdPostalCodeNavigation { get; set; }
 
     public virtual ICollection<Shipment> Shipments { get; set; } = new List<Shipment>();
 }

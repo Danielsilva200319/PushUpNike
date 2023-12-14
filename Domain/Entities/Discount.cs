@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Persistence.Entities;
+namespace Domain.Entities;
 
 public partial class Discount
 {
     public int Id { get; set; }
 
-    public string? Discount1 { get; set; }
+    public string Discount1 { get; set; }
 
-    public string? Description { get; set; }
+    public string Description { get; set; }
 
     public double? Percentage { get; set; }
 
@@ -21,5 +21,5 @@ public partial class Discount
 
     public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
 
-    public virtual Status? IdStatusNavigation { get; set; }
+    public virtual Status IdStatusNavigation { get; set; }
 }
